@@ -7,7 +7,7 @@ SELECT
 	tblLimiteCompra.Quantidade,
 	tblLimiteCompra.Limite_Compra,
 	(tblLimiteCompra.Limite_Compra - tblLimiteCompra.Quantidade) AS Diferenca,
-	CASE
+        CASE
 		WHEN (tblLimiteCompra.Limite_Compra - tblLimiteCompra.Quantidade) < 0 THEN "Inválida"
         	ELSE "Válida"
 	END AS Situacao_Venda
